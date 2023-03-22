@@ -32,63 +32,81 @@ export default function App() {
       value={nombres}
     />
     </View>
-    <Text style={{marginTop:10, fontSize:20}}>Asignatura</Text>
+    <View style={{flexDirection:"row", marginLeft:30}}>
+    <Text style={{marginTop:35, fontSize:20}}>Asignatura</Text>
     <TextInput
       placeholder="Ingrese la asignatura"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:40}]}
       onChangeText={asignatura=> setasignatura(asignatura)}
       value={asignatura}
       
     />
-    <Text style={{marginTop:10, fontSize:20}}>Nota Momento 1 (30%)</Text>
+    </View>
+    <View style={{flexDirection:"row", marginLeft:30, marginLeft:40}}>
+    <Text style={{marginTop:35, fontSize:20}}>Nota1(30%)</Text>
     <TextInput
       placeholder="Ingrese la nota"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:40}]}
       onChangeText={nota1=> setnota1(nota1)}
       value={nota1}
       
     />
-    <Text style={{marginTop:10, fontSize:20}}>Nota Moemento 2 (35%)</Text>
+    </View>
+    <View style={{flexDirection:"row", marginLeft:30}}>
+    <Text style={{marginTop:35, fontSize:20}}>Nota2(35%)</Text>
     <TextInput
       placeholder="Ingrese la nota"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:40}]}
       onChangeText={nota2=> setnota2(nota2)}
       value={nota2}
       
     />
-    <Text style={{marginTop:10, fontSize:20}}>Nota Moemento 3 (35%)</Text>
+    </View>
+    <View style={{flexDirection:"row", marginLeft:30}}>
+    <Text style={{marginTop:10, fontSize:20}}>Nota3(35%)</Text>
     <TextInput
       placeholder="Ingrese la nota"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:30}]}
       onChangeText={nota3=> setnota3(nota3)}
       value={nota3}
       
     />
+    </View>
+    <View style={{flexDirection:"row", marginLeft:30}}>
     <Text style={{marginTop:10, fontSize:20}}>Definitiva</Text>
     <TextInput
       placeholder="Ingrese la nota definitiva"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:30}]}
       onChangeText={definitiva=> setdefinitiva(definitiva)}
       value={definitiva}
       
     />
+    </View>
+    <View style={{flexDirection:"row", marginLeft:30}}>
     <Text style={{marginTop:10, fontSize:20}}>Observación</Text>
     <TextInput
       placeholder="Ingrese una observación"
-      style={[styles.inputs,{marginTop:10}]}
+      style={[styles.inputs,{marginTop:30,marginLeft:30}]}
       onChangeText={observacion=> setobservacion(observacion)}
       value={observacion}
-      
     />
-    <View>
-
-      
     </View>
+    <View style={[styles.container,{marginTop:20,flexDirection:'row'}]}>
+          <TouchableOpacity style={[{backgroundColor:'green'},styles.buttons]}>
+            <Text style={[styles.textButtons]}>Calcular/Guardar</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={[{backgroundColor:'red'},styles.buttons]}>
+            <Text style={[styles.textButtons]}>Limpiar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[{backgroundColor:'blue'},styles.buttons]}>
+            <Text style={[styles.textButtons]}>Buscar</Text>
+          </TouchableOpacity>
+        </View>
     </View>
     
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -102,12 +120,12 @@ const styles = StyleSheet.create({
     borderWidth:2, 
     textAlign:"center",
    },
-    Buttons: {
-      width:60,
-      borderRadius:10, 
-      justifyContent:'center',
-      alignItems:'center',
-      marginLeft:5
-  
-    },
+   buttons:{
+    borderRadius:10,
+    padding:10, 
+    width:120, 
+    justifyContent:'center',
+    alignItems:'center ',
+    marginLeft:5
+  },
 });
